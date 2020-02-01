@@ -100,7 +100,7 @@ bool FtpControlConnection::verifyWritePermission(const QString &command)
 QString FtpControlConnection::stripFlagL(const QString &fileName)
 {
     QString a = fileName.toUpper();
-    if (a == "-L") {
+    if (a == "-L" || a == "-A") {
         return "";
     }
     if (a.startsWith("-L ")) {
